@@ -1,0 +1,38 @@
+(defwidget vol[]
+    (eventbox 
+    :onscroll "wpctl set-volume @DEFAULT_AUDIO_SINK@ {}%; eww update volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $2 * 100}')"
+    :onhover "eww update rev_vol=true"
+    :onhoverlost "eww update rev_vol=false"
+        (box :class "border"
+            :space-evenly false
+            :spacing 0
+            (label 
+                :class "${volume > 95 ? 'red' : volume > 70 ? 'orange' : volume > 30 ? 'yellow' :  'sky'}"
+                :text "${volume > 95 ? '' :  volume > 30 ? '' :  ''}"
+                :width 10
+                :style "font-size: 17px;"
+            )
+            (revealer
+                :class "scale"
+                :transition "slideright"
+                :duration "900ms"
+                :reveal rev_vol
+                :draw-value false
+                (box :space-evenly false :spacing 4
+                    (box
+                        :width 8
+                    )
+                    (scale :min 0
+                        :max 101
+                        :value {volume}
+                        :round-digits 0
+                        :onchange "wpctl set-volume @DEFAULT_AUDIO_SINK@ {}%; eww update volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $2 * 100}')"
+                        :width 80
+                    )
+                    (label :width 26 :text {volume})
+                )
+            )
+            
+        )
+    )
+)

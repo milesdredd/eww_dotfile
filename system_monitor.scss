@@ -1,0 +1,136 @@
+.sys-mon-box {
+  background-color: #222222;
+  border-radius: 18px;
+  padding: 20px;
+  border: 3px solid #222222;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 1);
+}
+
+.time-label {
+  font-size: 48px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.cal {
+  background-color: #333333;
+  border-radius: 10px;
+  padding: 10px;
+  color: #ffffff;
+}
+
+.resources-box {
+  background-color: #333333;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.resources-box label {
+  color: #ffffff;
+}
+
+.resources-box progress {
+  background-color: #515151;
+  border-radius: 10px;
+}
+
+.resources-box progress trough {
+  background-color: #515151;
+  border-radius: 10px;
+}
+
+.resources-box progress .left, .resources-box progress .top {
+  background-color: #8cc640;
+  border-radius: 10px;
+}
+
+.cpu-circ-prog, .ram-circ-prog, .disk-circ-prog, .rtx-circ-prog {
+  color: #8cc640;
+}
+
+.cpu-graph, .ram-graph {
+  color: #8cc640;
+  background-color: #444444;
+  border-radius: 10px;
+  padding: 5px;
+  min-width: 100px;
+  min-height: 50px;
+}
+
+.conservation-mode-check {
+  all: unset;
+  background-color: #555;
+  border-radius: 15px;
+  min-width: 50px;
+  min-height: 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+.conservation-mode-check:checked {
+  background-color: #8cc640;
+}
+
+.conservation-mode-check:hover {
+  background-color: #777;
+}
+
+.conservation-mode-check:checked:hover {
+  background-color: #a1e650;
+}
+
+.conservation-mode-check trough {
+  all: unset;
+}
+
+.conservation-mode-check slider {
+  all: unset;
+  background-color: #fff;
+  border-radius: 50%;
+  min-width: 21px;
+  min-height: 21px;
+  margin: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.conservation-mode-check:checked slider {
+  margin-left: 25px;
+}
+
+.kbd-backlight-button {
+  background-color: #555;
+  color: #fff;
+  border-radius: 10px;
+  padding: 5px 15px;
+  font-size: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+.kbd-backlight-button:hover {
+  background-color: #777;
+}
+
+.fan-control-button {
+  background-color: #555;
+  color: #fff;
+  border-radius: 10px;
+  padding: 5px 15px;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.fan-control-button:hover {
+  background-color: #777;
+}
+
+.max-fan-speed-button {
+  background-color: #555;
+  color: #fff;
+  border-radius: 10px;
+  padding: 5px 15px;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.max-fan-speed-button:hover {
+  background-color: #777;
+}

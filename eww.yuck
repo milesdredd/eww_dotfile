@@ -1,0 +1,7 @@
+;; Main Eww File
+;; This file includes all the other yuck files.
+
+
+(include "./yuck/variables.yuck")
+(include "./yuck/widgets.yuck")
+(include "./yuck/windows.yuck")

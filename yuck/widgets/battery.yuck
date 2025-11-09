@@ -1,0 +1,111 @@
+; 
+
+(defwidget battery[]
+    (box :class "" :space-evenly false :spacing 4
+        (
+            revealer 
+            :reveal {blue.connected}
+            :transition "slideleft"
+            (box :space-evenly false :orientation "v" :class "" :spacing 0
+                (label :text "")
+                (progress  
+                    :halign "center"
+                    :valign "end"
+                    :orientation "v"
+                    :class "Blue_p"
+                    :orientation "h"
+                    :value {blue.battery}
+                )
+            )
+        )
+        
+        (button 
+            :onclick `sh -c 'eww active-windows | grep -q "^battery_popup:" && eww close battery_popup || eww open battery_popup'`
+
+
+            :onrightclick `eww close battery_popup`
+            (overlay
+                (progress
+                    :halign "center"
+                    :valign "center"
+                    :orientation "v"
+                    :class {power_usage > 0 ? "B-using" : "B-prog-panel"}
+                    :orientation "h"
+                    :value {EWW_BATTERY.BAT1.capacity}
+                )
+                (label :class "B_txt"
+                    :style "font-size: 15px;"
+                    :text "${EWW_BATTERY.BAT1.capacity} %"
+                )
+            )
+        )
+        
+    )
+    
+)
+
+(defwidget batt-box []
+    (eventbox
+        :onhoverlost `eww close battery_popup`    
+        (box :class "batt_popup"
+            :orientation "v"
+
+        
+            (box :class ""
+                
+            
+                (overlay
+                    (progress
+                        :halign "center"
+                        :valign "center"
+                        :orientation "v"
+                        :class "B-prog"
+                        :orientation "h"
+                        :value {EWW_BATTERY.BAT1.capacity}
+                    )
+                    (label :class "B_txt"
+                        :style "font-size: 40px;"
+                        :text "${EWW_BATTERY.BAT1.capacity} %"
+                    )
+                )
+            )
+            (box :class "" :space-evenly false :spacing 20 :style "padding: 10px"
+                (box :class "" :halign "start" :orientation "v"
+                    (label :class "" :halign "start" :text "Conservation Mode")
+                    (label :class "" :halign "start" :text "Current power draw from battery ")
+                    (label :class "" :halign "start" :text "cycle Count ")
+                                    
+                )
+                (box :class "" :space-evenly true :width 80 
+                    (box :class "" :halign "end" :orientation "v" :width 40
+                        (box :class "plate" 
+                            (checkbox :class "check"
+                                :checked true
+                                :onchecked  `echo 1 | sudo tee /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode`
+                                :onunchecked   `echo 0 | sudo tee /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode`
+
+                            )
+                        )
+                        
+                        (label :class "" :text "${pw_dw} W")
+                        (label :class "" :text "${c_c}")
+                    )
+                )
+            )
+            
+            (box :class ""
+                
+               
+                (graph  :class "graph"
+                    :value {pw_dw}
+                    :thickness 5
+                    :time-range "300s"
+                    :min 0
+                    :max 100
+                    :dynamic true
+                    :line-style "miter"
+                )    
+            )
+        )
+    )
+)

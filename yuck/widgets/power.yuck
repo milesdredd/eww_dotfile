@@ -1,0 +1,27 @@
+(defwidget power []
+    (eventbox
+		:cursor "pointer"
+        :onhover "eww update pow=true"
+        :onhoverlost "eww update pow=false"
+        (box :space-evenly false :spacing 6
+            
+            (revealer :reveal pow :transition "slideright" :duration "600ms"
+                (box :spacing 5 :space-evenly true
+                    (button :tooltip "shutdown" :width 30 :class "border" :onclick "sudo systemctl poweroff"  (label :class "red" :text ""))
+                    (button :tooltip "lock" :class "border" :onclick "hyprlock &" (label :text ""))
+                    (button :tooltip "configs" :onclick "kate ~/.config/niri ~/.config/eww &" :class "border" (label :text ""))
+
+                    (button :class "border"  :tooltip "reboot" :onclick "systemctl reboot" (label :class "orange" :text ""))
+                )
+            )
+            (box 
+                (transform
+                    :rotate 0
+                    :transform-origin-x 15
+                    :transform-origin-y 15
+                    (label :width 30 :style "font-size: 17px;" :class "shadow" :text "")
+                )   
+            )
+        )
+    )
+)

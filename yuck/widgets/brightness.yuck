@@ -1,0 +1,40 @@
+(defwidget br[]
+    (eventbox
+    :onhover "eww update rev_brightness=true"
+    :onhoverlost "eww update rev_brightness=false"
+        (box :class "border"
+            :space-evenly false
+            :spacing 0
+
+                (label 
+                    :class "${brightness > 95 ? 'red' : brightness > 70 ? 'orange ' : brightness > 30 ? 'yellow' :  'sky'}"
+                    ;:text ""
+                    :text "${brightness > 95 ? '' : brightness > 80 ? '' : brightness > 70 ? '' : brightness > 60 ? '' : brightness > 50 ? '' : brightness > 40 ? '' : brightness > 30 ? '' : brightness > 20 ? '' : brightness > 10 ? '' :  ''}"
+                   :width 4
+                   :style "font-size: 20px;"
+                )
+
+            (revealer
+                :class "scale"
+                :transition "slideright"
+                :duration "600ms"
+                :reveal rev_brightness
+                (box :space-evenly false :spacing 4 
+                    (box
+                        :width 4
+                    )
+                    (scale :min 0
+                        :max 101
+                        :class "${brightness > 95 ? 'red' : brightness > 70 ? 'yellow' : brightness > 30 ? 'blue' :  'low'}"
+                        :value {brightness}
+                        :round-digits 0
+                        :onchange "brightnessctl set {}%; eww update brightness=$(brightnessctl -m | cut -d, -f4 | tr -d '%')"
+                        :width 80
+                    )
+                    (label :width 26 :text {brightness})
+                    )
+            )
+            
+        )
+    )
+)

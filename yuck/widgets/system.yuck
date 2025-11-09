@@ -1,0 +1,125 @@
+(defpoll gpu :interval "5s" `nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits`)
+
+(defwidget hw-box []
+    (eventbox
+        :onhoverlost `eww close hw_ui`    
+		(box :class ""
+            :orientation "v"
+			(overlay
+				(transform
+				:translate-x "-11.60%"
+				:translate-y "9.19%"
+				:scale-x "67%"
+				:scale-y "67%"
+					(circular-progress
+					:value "${EWW_CPU.avg}"
+					:start-at 10
+					:thickness 30
+					:class "circ_cpu"
+				
+					)
+				)
+				(transform
+				:translate-x "44.10%"
+				:translate-y "9.5%"
+				:scale-x "67%"
+				:scale-y "67%"
+					(circular-progress
+					:value {gpu}
+					:start-at 25
+					:thickness 30
+					:class "circ_cpu"
+				
+					)
+				)
+				(transform
+				:translate-x "31.5%"
+				:translate-y "52.1%"
+				:scale-x "37%"
+				:scale-y "37%"
+					(circular-progress
+					:value "${EWW_RAM.used_mem_perc}"
+
+					:start-at 25
+					:thickness 24
+					:class "circ_cpu"
+				
+					)
+				)
+				(image
+
+					:path "./src/hw2.png"
+					:preserve-aspect-ratio true
+					:image-width 500
+				)
+			)
+        )
+    )
+) 
+
+(defwidget sys_info[]
+	(eventbox
+		:onclick "eww open hw_ui"
+		(box  :orientation "h" :space-evenly false :spacing 6
+        (overlay
+        
+            (box 
+                (circular-progress
+                :width 30
+                :class "circ_cpu"
+                :value "${EWW_CPU.avg}"
+                :thickness 10
+                )
+            )
+            (box :halign "center" :space-evenly true
+                (label
+					:style "font-size: 20px;"
+                    :class "shadow"
+                    :text "󰍛"
+                )
+            )
+            
+        )
+        (overlay 
+        
+            (box  
+                (circular-progress
+                :width 30
+                :class "circ_cpu or"
+                :value "${EWW_RAM.used_mem_perc}"
+                :thickness 10
+                )
+            )
+            (box :halign "center" :space-evenly true
+                (label  :style "font-size: 15px;"
+                    :class "shadow"
+                    :text ""
+                )
+            )
+        )
+        
+        (overlay 
+        
+            (box  
+                (circular-progress
+                :width 30
+                :class "circ_cpu or"
+                :value "${EWW_RAM.used_mem_perc}"
+                :thickness 10
+                )
+            )
+            (box :halign "center" :space-evenly true
+                (label  :style "font-size: 17px;"
+                    :class "shadow"
+                    :text "󰘚"
+                )
+            )
+        )
+        (label :text " ${EWW_TEMPS.CORETEMP_PACKAGE_ID_0}°C")
+        (box :class "border" :spacing 5
+                (label :text {fan1})
+                (label :text {fan2})
+            )
+		)	
+	)
+)

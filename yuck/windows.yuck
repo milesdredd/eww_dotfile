@@ -1,0 +1,78 @@
+(defwindow bar
+  :monitor "eDP-1"
+  :geometry (geometry :x "0px" :y "0%" :width "100%" :height "30px")
+  :anchor "top center"
+  :exclusive true
+  :stacking "fg"
+  :namespace "top-panel"
+  :windowtype "dock"
+  :visible true
+  :type "dock"
+  (bar1 :orientation "h")
+)
+
+(defwindow noti
+    :monitor "eDP-1"
+    :geometry (geometry :x "79%" :y "6%" :width "20%" :height "120px")
+    :exclusive true
+    :stacking "fg"
+    ;:windowtype "normal"
+    :visible true
+    :type "normal"
+  (literal :content notif-box)
+)
+
+(defwindow bluetooth-panel
+  :monitor "eDP-1"
+  :geometry (geometry :x "1410px" :y "25px" :width "400px" :height "550px")
+  :anchor "center"
+  :exclusive true
+  :stacking "fg"
+  ;:windowtype "normal"
+  :visible true
+  :type "normal"
+  (blue-box )
+)
+
+(defwindow battery_popup
+  :monitor "eDP-1"
+  :geometry (geometry :x "1450px" :y "20px" :width "350px" :height "550px")
+  :anchor "center"
+  :exclusive true
+  :stacking "fg"
+  ;:windowtype "normal"
+  :visible true
+  :type "normal"
+  (batt-box )
+)
+
+(defwindow hw_ui
+  :monitor "eDP-1"
+  :geometry (geometry :x "15px" :y "30px" :width "500px" :height "250px")
+  :anchor "center"
+  :exclusive true
+  :stacking "fg"
+  ;:windowtype "normal"
+  :visible true
+  :type "normal"
+  (hw-box )
+)
+
+(defwindow surf-w
+  :monitor "eDP-1"
+  :geometry (geometry :x "1010px" :y "150px" :width "900px" :height "350px")
+  :anchor "center"
+  :exclusive true
+  :stacking "fg"
+  ;:windowtype "normal"
+  :visible true
+  :type "normal"
+  (search-box )
+)
+
+(defwindow system_monitor_window
+  :monitor "eDP-1"
+  :geometry (geometry :x "50%" :y "50%" :width "700px" :height "600px" :anchor "center")
+  :stacking "fg"
+  :wm-ignore false
+  (system_monitor))
