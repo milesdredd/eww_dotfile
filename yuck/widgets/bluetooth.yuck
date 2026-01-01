@@ -5,8 +5,8 @@
 (defwidget blue-box []
   (box :class "blue-box" :orientation "v" :space-evenly false :spacing 20
     (box :orientation "h" :space-evenly true :spacing 10
-      (button :onclick "bluetoothctl power `echo ubuntum | sudo -S` off" "")
-      (button :onclick "bluetoothctl power `echo ubuntum | sudo -S` on" "")
+      (button :onclick "bluetoothctl power `echo ubuntum | sudo -S` off" "off")
+      (button :onclick "bluetoothctl power `echo ubuntum | sudo -S` on" "on")
       (button :onclick "bluetoothctl scan on &" "")
       (button :onclick "blueman-manager &" ""))
     (box :orientation "v" :space-evenly false :spacing 10
@@ -16,9 +16,9 @@
           (label :text {device.name})
           (label :text {device.battery ? "${device.battery}%" : ""})
           (button :onclick `bluetoothctl disconnect ${device.mac}` ""))))
-    (box :orientation "v" :space-evenly false :spacing 10
+    (box :orientation "v" :space-evenly true :spacing 10
       (label :text "Available Devices" :halign "start")
       (for device in bluetooth_available
         (box :orientation "h" :space-evenly false :spacing 10
           (label :text {device.name})
-          (button :onclick `bluetoothctl connect ${device.mac}` ""))))))
+          (button :halign "end" :onclick `bluetoothctl connect ${device.mac}` ""))))))

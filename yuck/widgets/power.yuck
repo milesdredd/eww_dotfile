@@ -11,6 +11,8 @@
                     (button :tooltip "lock" :class "border" :onclick "hyprlock &" (label :text ""))
                     (button :tooltip "configs" :onclick "kate ~/.config/niri ~/.config/eww &" :class "border" (label :text ""))
 
+                    (button :tooltip "change wallpaper" :onclick "/home/milesdredd/.config/niri/wallpaper.sh" :onrightclick "/home/milesdredd/.config/niri/wallpaper.sh p" :class "border" (label :text ""))
+
                     (button :class "border"  :tooltip "reboot" :onclick "systemctl reboot" (label :class "orange" :text ""))
                 )
             )

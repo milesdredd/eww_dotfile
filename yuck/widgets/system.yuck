@@ -86,7 +86,7 @@
                 (circular-progress
                 :width 30
                 :class "circ_cpu or"
-                :value "${EWW_RAM.used_mem_perc}"
+                :value "${gpu}"
                 :thickness 10
                 )
             )
@@ -116,8 +116,10 @@
             )
         )
         (label :text " ${EWW_TEMPS.CORETEMP_PACKAGE_ID_0}°C")
-        (box :class "border" :spacing 5
+        (box :class "border" :spacing 0
+
                 (label :text {fan1})
+                (label :text "")
                 (label :text {fan2})
             )
 		)	

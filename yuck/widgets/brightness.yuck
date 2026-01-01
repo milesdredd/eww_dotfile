@@ -9,7 +9,7 @@
                 (label 
                     :class "${brightness > 95 ? 'red' : brightness > 70 ? 'orange ' : brightness > 30 ? 'yellow' :  'sky'}"
                     ;:text ""
-                    :text "${brightness > 95 ? '' : brightness > 80 ? '' : brightness > 70 ? '' : brightness > 60 ? '' : brightness > 50 ? '' : brightness > 40 ? '' : brightness > 30 ? '' : brightness > 20 ? '' : brightness > 10 ? '' :  ''}"
+                    :text "${brightness > 95 ? '' : brightness > 80 ? '' : brightness > 70 ? '' : brightness > 60 ? '' : brightness > 50 ? '' : brightness > 40 ? '' : brightness > 30 ? '' : brightness > 20 ? '' : brightness > 10 ? '' :  ''}"
                    :width 4
                    :style "font-size: 20px;"
                 )
@@ -23,7 +23,7 @@
                     (box
                         :width 4
                     )
-                    (scale :min 0
+                    (scale :min 1
                         :max 101
                         :class "${brightness > 95 ? 'red' : brightness > 70 ? 'yellow' : brightness > 30 ? 'blue' :  'low'}"
                         :value {brightness}

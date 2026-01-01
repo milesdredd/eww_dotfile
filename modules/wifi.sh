@@ -12,7 +12,7 @@ elif [ "$signal" -ge -50 ]; then
 elif [ "$signal" -ge -70 ]; then
     icon="󰤢"
 elif [ "$signal" -ge -90 ]; then
-    icon="󰤟󰤟"
+    icon="󰤟"
 else
     icon="󰖪"
 fi
