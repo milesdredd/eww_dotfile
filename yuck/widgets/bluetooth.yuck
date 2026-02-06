@@ -15,10 +15,10 @@
         (box :orientation "h" :space-evenly false :spacing 10
           (label :text {device.name})
           (label :text {device.battery ? "${device.battery}%" : ""})
-          (button :onclick `bluetoothctl disconnect ${device.mac}` ""))))
+          (button :halign "end" :hexpand true :onclick `bluetoothctl disconnect ${device.mac}` ""))))
     (box :orientation "v" :space-evenly true :spacing 10
       (label :text "Available Devices" :halign "start")
       (for device in bluetooth_available
         (box :orientation "h" :space-evenly false :spacing 10
           (label :text {device.name})
-          (button :halign "end" :onclick `bluetoothctl connect ${device.mac}` ""))))))
+          (button :halign "end" :hexpand true :onclick `bluetoothctl connect ${device.mac}` ""))))))

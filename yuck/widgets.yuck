@@ -71,7 +71,7 @@
 )
 
 (defwidget bar1 []
-    (centerbox :class "plate" :height 28
+    (centerbox :class "plate" :height 25
         (box  :spacing 1 :space-evenly true :orientation "h"
             (sys_info)
         )
@@ -100,7 +100,6 @@
              :space-evenly "false"
              :spacing 2
              (label :text "miles")
-
     )
 )
 
