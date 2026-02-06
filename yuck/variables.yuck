@@ -18,7 +18,6 @@
 (defpoll rtx_power :interval "2s" "nvidia-smi --query-gpu=power.draw --format=csv,noheader,nounits | awk '{print $1}'")
 (defpoll conservation_mode_state :interval "2s" "cat /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode")
 (defpoll kbd_backlight_state :interval "1s" "cat /sys/class/leds/platform::kbd_backlight/brightness")
-(defpoll max_fan_speed_state :interval "2s" "legion_cli maximumfanspeed-status")
 (defpoll net_up :interval "2s" "ifstat -n wlp8s0 1 1 | tail -1 | awk '{print $2}' | awk -F'.' '{print $1}'")
 (defpoll net_down :interval "2s" "ifstat -n wlp8s0 1 1 | tail -1 | awk '{print $1}' | awk -F'.' '{print $1}'")
 
