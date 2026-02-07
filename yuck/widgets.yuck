@@ -50,7 +50,7 @@
 )
 
 (defwidget Bluetooth []
-    (button :class "border" :onclick "eww open bluetooth-panel" :onrightclick "eww close bluetooth-panel"
+    (button :class "border" :width 30 :onclick "eww open bluetooth-panel" :onrightclick "eww close bluetooth-panel"
         (label
             :width 16
             :text "󰂯"
@@ -71,7 +71,7 @@
 )
 
 (defwidget bar1 []
-    (centerbox :class "plate" :height 25
+    (centerbox :class "plate" :height 20
         (box  :spacing 1 :space-evenly true :orientation "h"
             (sys_info)
         )
@@ -81,9 +81,10 @@
 
             
         )
-        (box  :class "" :halign "end" :spacing 4 :space-evenly false :orientation "h"
+        (box  :class "" :halign "end" :spacing 15 :space-evenly false :orientation "h"
              (wifi)(Bluetooth)
-             (br)(vol)
+             (br)
+             (vol)
              
              (tray)
              (battery)

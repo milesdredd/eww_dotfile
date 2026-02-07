@@ -1,16 +1,18 @@
 (defwidget vol[]
-    (eventbox 
+    (eventbox :class "border"
     :onscroll "wpctl set-volume @DEFAULT_AUDIO_SINK@ {}%; eww update volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $2 * 100}')"
     :onhover "eww update rev_vol=true"
     :onhoverlost "eww update rev_vol=false"
-        (box :class "border"
+    :width 30
+        (box 
             :space-evenly false
             :spacing 0
+            :halign "center"
             (label 
                 :class "${volume > 95 ? 'red' : volume > 70 ? 'orange' : volume > 30 ? 'yellow' :  'sky'}"
                 :text "${volume > 95 ? '' :  volume > 30 ? '' :  ''}"
                 :width 10
-                :style "font-size: 17px;"
+                :style "font-size: 15px;"
             )
             (revealer
                 :class "scale"

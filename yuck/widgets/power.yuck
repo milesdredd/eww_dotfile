@@ -21,7 +21,7 @@
                     :rotate 0
                     :transform-origin-x 15
                     :transform-origin-y 15
-                    (label :width 30 :style "font-size: 17px;" :class "shadow" :text "")
+                    (label :width 30 :style "font-size: 14px;" :class "shadow" :text "")
                 )   
             )
         )
