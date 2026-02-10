@@ -5,8 +5,9 @@
 (defwidget blue-box []
   (box :class "blue-box" :orientation "v" :space-evenly false :spacing 20
     (box :orientation "h" :space-evenly true :spacing 10
-      (button :onclick "bluetoothctl power `echo ubuntum | sudo -S` off" "off")
-      (button :onclick "bluetoothctl power `echo ubuntum | sudo -S` on" "on")
+        (button :onclick "sudo bluetoothctl power on" "on")
+        (button :onclick "sudo bluetoothctl power off" "X")
+
       (button :onclick "bluetoothctl scan on &" "")
       (button :onclick "blueman-manager &" ""))
     (box :orientation "v" :space-evenly false :spacing 10

@@ -5,7 +5,7 @@
         :onhoverlost "eww update pow=false"
         (box :space-evenly false :spacing 6
             
-            (revealer :reveal pow :transition "slideright" :duration "600ms"
+            (revealer :reveal pow :transition "slideleft" :duration "600ms"
                 (box :spacing 5 :space-evenly true
                     (button :tooltip "shutdown" :width 30 :class "border" :onclick "sudo systemctl poweroff"  (label :class "red" :text ""))
                     (button :tooltip "lock" :class "border" :onclick "hyprlock &" (label :text ""))

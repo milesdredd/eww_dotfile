@@ -16,3 +16,15 @@
             )
     )
 )
+
+(defwidget qclock[]
+    
+            
+        (label 
+            :class "big"
+            :text "${time.hour}:${time.min}:${time.sec}"
+
+
+        )
+    
+)

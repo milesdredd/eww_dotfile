@@ -18,7 +18,7 @@ else
 fi
 if [ -z "$ssid" ]; then 
     icon="󰖪"
-    signal_percent=""
+    signal_percent="&"
 fi
 
 echo "{\"icon\":\"$icon\",\"ssid\":\"$ssid\",\"signal\":\"$signal_percent\",\"interface\":\"$interface\"}"
