@@ -32,5 +32,5 @@
 (defvar notif-box "(label :text \"\")")
 (defvar rev_batt true)
 (defvar r true)
-(defvar rqb true)
+(defvar rqb false)
 (defvar bar true)

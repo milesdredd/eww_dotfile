@@ -1,6 +1,6 @@
 (defwindow bar
   :monitor "eDP-1"
-  :geometry (geometry :x "0px" :y "0%" :width "100%" :height "33px")
+  :geometry (geometry :x "0px" :y "0%" :width "100%" :height "3px")
   :exclusive true
   :anchor "top center"
   :stacking "fg"
@@ -14,18 +14,13 @@
 (defwindow quickbar
   :monitor "eDP-1"
   :geometry (geometry 
-                :x "1799px" 
+                :x "0px" 
                 :y "160px" 
-                :width "130px"
+                :width "0px"
                 :height "90px"
              )
-  :exclusive true
-  :anchor "right"
   :stacking "overlay"
-  :namespace "quick-panel"
- ; :windowtype "dock"
- ; :visible true
- ; :type "dock"
+  :anchor "left"
   (Qbar :orientation "h")
 )
 ;(include "./widgets/QuickBar/Qbar.yuck")
@@ -70,7 +65,7 @@
   :geometry (geometry :x "15px" :y "30px" :width "500px" :height "250px")
   :anchor "center"
   :exclusive true
-  :stacking "fg"
+  :stacking "overlay"
   ;:windowtype "normal"
   :visible true
   :type "normal"

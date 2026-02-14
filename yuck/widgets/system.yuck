@@ -15,7 +15,7 @@
 					:value "${EWW_CPU.avg}"
 					:start-at 10
 					:thickness 30
-					:class "circ_cpu"
+					:class "${EWW_CPU.avg > 95 ? 'red' : EWW_CPU.avg > 70 ? 'orange' : EWW_CPU.avg > 30 ? 'yellow' :  'sky'} circ_cpu"
 				
 					)
 				)
@@ -28,7 +28,7 @@
 					:value {gpu}
 					:start-at 25
 					:thickness 30
-					:class "circ_cpu"
+					:class "${gpu > 95 ? 'red' : gpu > 70 ? 'orange' : gpu > 30 ? 'yellow' :  'sky'} circ_cpu"
 				
 					)
 				)
@@ -42,7 +42,10 @@
 
 					:start-at 25
 					:thickness 24
-					:class "circ_cpu"
+					:class "${EWW_RAM.used_mem_perc > 95 ? 'red' :
+                        EWW_RAM.used_mem_perc > 70 ? 'orange' :
+                        EWW_RAM.used_mem_perc > 30 ? 'yellow' :
+                        'sky'} circ_cpu"
 				
 					)
 				)
@@ -56,26 +59,26 @@
         )
     )
 ) 
-
+(defvar test 90)
 (defwidget sys_info[]
 	(eventbox
 		:onclick "eww open hw_ui"
-		(box  :orientation "h" :space-evenly false :spacing 6
+		(box  :orientation "h" :space-evenly false :spacing 6 :class ""
         (overlay
         
             (box 
                 (circular-progress
                 :width 30
-                :class "circ_cpu"
+                :class "${EWW_CPU.avg > 95 ? 'red' : EWW_CPU.avg > 70 ? 'orange' : EWW_CPU.avg > 30 ? 'yellow' :  'sky'} circ_cpu"
                 :value "${EWW_CPU.avg}"
-                :thickness 10
+                :thickness 4
                 )
             )
             (box :halign "center" :space-evenly true
                 (label
-					:style "font-size: 20px;"
+					:style "font-size: 10px;"
                     :class "shadow"
-                    :text "󰍛"
+                    :text "C"
                 )
             )
             
@@ -85,15 +88,15 @@
             (box  
                 (circular-progress
                 :width 30
-                :class "circ_cpu or"
+                :class "${gpu > 95 ? 'red' : gpu > 70 ? 'orange' : gpu > 30 ? 'yellow' :  'sky'} circ_cpu"
                 :value "${gpu}"
-                :thickness 10
+                :thickness 4
                 )
             )
             (box :halign "center" :space-evenly true
-                (label  :style "font-size: 15px;"
-                    :class "shadow"
-                    :text ""
+                (label  :style "font-size: 10px;"
+                    :class ""
+                    :text "G"
                 )
             )
         )
@@ -103,21 +106,32 @@
             (box  
                 (circular-progress
                 :width 30
-                :class "circ_cpu or"
+                :class "${EWW_RAM.used_mem_perc > 95 ? 'red' :
+                 EWW_RAM.used_mem_perc > 70 ? 'orange' :
+                  EWW_RAM.used_mem_perc > 30 ? 'yellow' :
+                    'sky'} circ_cpu"
+
+
                 :value "${EWW_RAM.used_mem_perc}"
-                :thickness 10
+                :thickness 4
                 )
             )
             (box :halign "center" :space-evenly true
-                (label  :style "font-size: 17px;"
+                (label  :style "font-size: 10px;"
                     :class "shadow"
-                    :text "󰘚"
+                    :text "R"
                 )
             )
         )
-        (label :text " ${EWW_TEMPS.CORETEMP_PACKAGE_ID_0}°C")
-        (box :class "border" :spacing 0
+        (label 
+        :class "${EWW_TEMPS.CORETEMP_PACKAGE_ID_0 > 80 ? 'red' :
+         EWW_TEMPS.CORETEMP_PACKAGE_ID_0 > 65 ? 'orange' :
+          EWW_TEMPS.CORETEMP_PACKAGE_ID_0 > 50 ? 'yellow' :
+            'sky'} "
 
+         :style "font-size: 14px;"
+         :text "${EWW_TEMPS.CORETEMP_PACKAGE_ID_0 > 65 ? '' :EWW_TEMPS.CORETEMP_PACKAGE_ID_0 > 50 ? '': ''} ${EWW_TEMPS.CORETEMP_PACKAGE_ID_0}°C")
+        (box :class "big" :spacing 0
                 (label :text {fan1})
                 (label :text "")
                 (label :text {fan2})

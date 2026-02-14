@@ -1,19 +1,35 @@
 (defwidget clock[]
     (tooltip
-            (box :class "plate"
-                (calendar :class "plate2"
-                      :day {time.day}
-                      :month {time.month}
-                      :year `20{time.yr}`
-                      :show-details true
-                      :show-heading true
-                      :show-day-names true
-                )
+        (box :class "plate"
+            (calendar :class "plate"
+                    :day {time.day}
+                    :month {time.month}
+                    :year `20{time.yr}`
+                    :show-details true
+                    :show-heading true
+                    :show-day-names true
+            )
+        )
+        (box
+            :class ""
+            (label
+            :class "big"
+            :text "! shiv !"
+            :visible {time.date == 15}
+        
             )
             (label
-                :class "plate2"
-                :text "${time.day} ${time.date} ${time.month} ${time.yr} | ${time.hour}:${time.min}:${time.sec}"
+            :class ""
+            :text "${time.day} ${time.date} ${time.month} ${time.yr} | ${time.hour}:${time.min}:${time.sec}"
             )
+            (label
+            :class "big"
+            :text "! shiv !"
+            :visible {time.date == 15}
+        
+            )
+        )
+
     )
 )
 
@@ -21,10 +37,7 @@
     
             
         (label 
-            :class "big"
+            :class "big"  
             :text "${time.hour}:${time.min}:${time.sec}"
-
-
-        )
-    
+        )   
 )

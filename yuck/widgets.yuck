@@ -51,10 +51,11 @@
 )
 
 (defwidget Bluetooth []
-    (button :class "border" :width 30 :onclick "eww open bluetooth-panel" :onrightclick "eww close bluetooth-panel"
+    (button :class "" :width 20 :onclick "eww open bluetooth-panel" :onrightclick "eww close bluetooth-panel"
         (label
-            :width 16
-            :text "󰂯"
+            :width 4
+            :style "font-size: 14px;"
+            :text ""
         )
     )
 )
@@ -63,8 +64,8 @@
     (box :class "border"
     (systray
             
-            :icon-size 18
-            :spacing 2
+            :icon-size 16
+            :spacing 8
             :space-evenly false
             :width 10
             :prepend-new 0
@@ -72,7 +73,7 @@
 )
 
 (defwidget bar1 []
-    (revealer
+    (revealer :class ""
         :reveal bar
         :valign "start"
         :transition "slidedown" 
@@ -116,7 +117,11 @@
 
 (defwidget  Qbar []
     (box :class ""
-        (qbar)
+        :halign "end"
+        
+        (box :space-evenly false
+            (qbar)
+        )
         
     )
     

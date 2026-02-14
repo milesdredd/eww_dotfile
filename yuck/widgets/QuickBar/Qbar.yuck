@@ -1,8 +1,8 @@
 (defwidget qbar []
     
-        (revealer
-        :halign "end"
-        :reveal rqb :transition "slideleft" :duration "600ms"
+        (revealer 
+        :halign "start"
+        :reveal rqb :transition "slideright" :duration "600ms"
             (box :class "float"
             :width 130
                 (qclock)
