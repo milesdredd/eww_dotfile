@@ -5,9 +5,6 @@
   :anchor "top center"
   :stacking "fg"
   :namespace "top-panel"
- ; :windowtype "dock"
- ; :visible true
- ; :type "dock"
   (bar1 :orientation "h")
 )
 

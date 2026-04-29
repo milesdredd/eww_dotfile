@@ -82,7 +82,7 @@
             (centerbox
             :valign "start"
             
-            :class "plate box-shadow" 
+            :class "plate box-shadow"
             :height 20
                 (box  
                 :spacing 1 
