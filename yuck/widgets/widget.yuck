@@ -1,0 +1,24 @@
+(defwidget widget-box[]
+    (box :class ""
+    
+    :orientation "v"
+        (overlay
+        :height 240
+                (label
+                    :valign "start"
+                    :class "desktop-clock font1"
+                    :text "${time.day} ${time.date} ${time.month} ${time.yr}\""
+                )
+                (label
+                :valign "end"
+                    :class "desktop-clock font1"
+                    :text "${time.hour}:${time.min}"
+                )
+        )
+        (label
+            :class "textStyle font"
+            :text "Hi miles !"
+        )
+    )
+
+)

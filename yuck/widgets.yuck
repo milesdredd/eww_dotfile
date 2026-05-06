@@ -78,7 +78,8 @@
         :valign "start"
         :transition "slidedown" 
         :duration "600ms"
-        (box  :class "" :height 33
+        (box  :class ""
+        :height 29
             (centerbox
             :valign "start"
             

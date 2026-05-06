@@ -57,6 +57,18 @@
   (batt-box )
 )
 
+(defwindow widget
+  :monitor "eDP-1"
+  :geometry (geometry :x "10px" :y "40px" :width "100%" :height "300px")
+  :anchor "top center"
+  
+  :stacking "bg"
+  :visible true
+  :type "normal"
+  :namespace "widgett"
+  (widget-box )
+)
+
 (defwindow hw_ui
   :monitor "eDP-1"
   :geometry (geometry :x "15px" :y "30px" :width "500px" :height "250px")

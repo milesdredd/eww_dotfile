@@ -1,0 +1,23 @@
+(defwindow clipboard
+  :monitor "eDP-1"
+  :geometry (geometry :x "1550px" :y "520px" :width "350px" :height "550px")
+  :anchor "center"
+  :exclusive "true"
+  :stacking "bg"
+  :focusable "true"
+  ;:windowtype "normal"
+  :visible true
+  :type "toolbar"
+  (clipboard-box )
+)
+(defwidget clipboard-box []
+    (eventbox :class " new clipboard"
+        (box :class "new"
+            (input
+                :value "hi raj"
+
+
+            )
+        )
+    )
+)
