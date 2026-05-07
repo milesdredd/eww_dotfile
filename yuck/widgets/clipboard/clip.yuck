@@ -1,4 +1,4 @@
-(defwindow clipboard
+(defwindow calender
   :monitor "eDP-1"
   :geometry (geometry :x "1550px" :y "520px" :width "350px" :height "550px")
   :anchor "center"
@@ -8,16 +8,12 @@
   ;:windowtype "normal"
   :visible true
   :type "toolbar"
-  (clipboard-box )
+  (calender-box )
 )
-(defwidget clipboard-box []
-    (eventbox :class " new clipboard"
+(defwidget calender-box []
+    (eventbox :class "new clipboard"
         (box :class "new"
-            (input
-                :value "hi raj"
-
-
-            )
+            
         )
     )
 )

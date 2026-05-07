@@ -1,8 +1,8 @@
 #!/bin/bash
 interface=$(iw dev | awk '$1 == "Interface" {print $2}')
-ssid="connected to $(iw dev "$interface" link | awk -F 'SSID: ' '/SSID/ {print $2}')"
+ssid="$(iw dev "$interface" link | awk -F 'SSID: ' '/SSID/ {print $2}')"
 signal=$(iw dev "$interface" link | awk '/signal:/ {print $2}')
-signal_percent=" signat strength: $((signal + 120))"
+signal_percent="$((signal + 120))"
 
 
 if [ "$signal" -ge -40 ]; then

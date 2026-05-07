@@ -12,8 +12,6 @@
         (box
             :orientation "v"
             :class "plate"
-            (label :text "${wifi.ssid}")
-            (label :text "${wifi.signal}")
             (overlay
                 (image
                     :path "/home/milesdredd/Downloads/graph.jpeg"
@@ -40,12 +38,53 @@
 
                         )
                 )
-            (label :text "↓${EWW_NET.wlp8s0?.NET_DOWN ?: "0 B/s"}")
-            (label :text "↑${EWW_NET.wlp8s0?.NET_UP ?: "0 B/s"} ")
+                        (label :text "↓${(EWW_NET.wlp8s0?.NET_DOWN ?: 0) > 1048576 ?
+                                "${round((EWW_NET.wlp8s0?.NET_DOWN ?: 0) / 1048576, 2)} MB/s" :
+                                "${round((EWW_NET.wlp8s0?.NET_DOWN ?: 0) / 1024, 0)} KB/s"}"
+                        )
+                        (label :text "↑${(EWW_NET.wlp8s0?.NET_UP ?: 0) > 1048576 ?
+                                "${round((EWW_NET.wlp8s0?.NET_UP ?: 0) / 1048576, 2)} MB/s" :
+                                "${round((EWW_NET.wlp8s0?.NET_UP ?: 0) / 1024, 0)} KB/s"}"
+                        )
+
         )
         (box 
             :class "border"
-            (label  :class "wifi" :text "${wifi.icon}")
+            :orientation "h"
+            :space-evenly "false"
+            (box
+            :orientation "v"
+
+
+            (overlay :class "" :space-evenly "false"
+            
+
+                (progress  :class "wifiScale"
+                    :orientation "v"
+                    :flipped "true"
+                    :value 100;"${wifi.signal -30?:0}"
+                )
+                (image :class ""
+                    :path "/home/milesdredd/.config/eww/src/wifiCover.png"
+                    :preserve-aspect-ratio "true"
+                    :image-height 20
+                    :valign "center"
+                    :halign "center"
+                )
+                
+
+                
+            )
+            
+                )
+             (box :class ""
+             :orientation "v"
+             :width 40
+                    (label :class "data" :text "↓${(EWW_NET.wlp8s0?.NET_DOWN ?: 0) > 1048576 ?
+                            "${round((EWW_NET.wlp8s0?.NET_DOWN ?: 0) / 1048576, 2)} MB/s" :
+                            "${round((EWW_NET.wlp8s0?.NET_DOWN ?: 0) / 1024, 0)} KB/s"}"
+                    )
+            )
         )
     )
 )

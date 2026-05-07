@@ -11,11 +11,29 @@
     //transition: out 0.5s ease-in-out;
 }
 
-.box-in {
-    // margin: 2px 2px 2px 2px;
-    //border: 2px solid blueviolet;
-    // background-color: #ff00ff;
+.data {
+    font-size: 12px;
 }
+
+.wifiScale {
+    >trough {
+        background-color: #404040;
+
+        min-height: 1px;
+        min-width: 15px;
+        border-radius: 0px;
+
+        >progress {
+            margin: 3px;
+            background-color: rgb(94, 179, 165);
+            min-height: 0px;
+            min-width: 15px;
+        }
+    }
+
+}
+
+
 
 .shadow {
     text-shadow:
@@ -26,16 +44,15 @@
 
 .box-shadow {
     border: 0px solid red;
-    box-shadow: 0px 0px 2px 2px rgb(25, 255, 4);
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.562);
 }
 
 .plate {
 
-    border: 0px solid red;
-    box-shadow: 6px 0px 4px rgba(0, 0, 0, 0.9);
+    // border: 1px solid red;
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
-    border-radius: 0px;
+    border-radius: 8px;
     background-color: #202020;
     // max-height: 28px;
     // background-color: #292929;
@@ -43,7 +60,7 @@
 
 .float {
 
-    border: 0px solid #373737;
+    //border: 0px solid #373737;
     box-shadow: -1px 0px 4px rgba(0, 0, 0, 0.7), inset 0px 0px 5px rgba(0, 0, 0, 0.9);
 
     margin: 8px 8px 8px 0px;
@@ -55,7 +72,7 @@
 }
 
 .border {
-    //border: 1px solid #474747;
+    border: 0px solid #474747;
     font-family: "JetBrainsMono Nerd Font";
     border-radius: 8px;
     padding: 0px 4px;
@@ -63,7 +80,7 @@
 
     //background-color: #474747;
     &:hover {
-        border: 1px solid #858585;
+        border: 0px solid #858585;
         background-color: #474747;
     }
 }
@@ -233,13 +250,12 @@ window#bar {
     }
 
     .left,
-    .top,
-    {
-    background-color: #8cc640;
-    min-height: 63px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9);
-}
+    .top {
+        background-color: #8cc640;
+        min-height: 63px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9);
+    }
 
 }
 
@@ -256,15 +272,14 @@ window#bar {
     }
 
     .left,
-    .top,
-    {
-    margin: 0px;
-    background-color: #24c76d;
-    min-height: 15px;
-    min-width: 1px;
-    border-radius: 4px 1px 1px 4px;
-    //box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.9);
-}
+    .top {
+        margin: 0px;
+        background-color: #24c76d;
+        min-height: 15px;
+        min-width: 1px;
+        border-radius: 4px 1px 1px 4px;
+        //box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.9);
+    }
 
 }
 
@@ -281,14 +296,13 @@ window#bar {
     }
 
     .left,
-    .top,
-    {
-    margin: 0px;
-    background-color: #ff501b;
-    min-height: 15px;
-    min-width: 1px;
-    border-radius: 4px 0px 0px 4px;
-}
+    .top {
+        margin: 0px;
+        background-color: #ff501b;
+        min-height: 15px;
+        min-width: 1px;
+        border-radius: 4px 0px 0px 4px;
+    }
 
 }
 
@@ -305,13 +319,12 @@ window#bar {
     }
 
     .left,
-    .top,
-    {
-    background-color: #24c76d;
-    min-height: 3px;
-    min-width: 1px;
-    border-radius: 5px;
-}
+    .top {
+        background-color: #24c76d;
+        min-height: 3px;
+        min-width: 1px;
+        border-radius: 5px;
+    }
 
 }
 
@@ -345,7 +358,7 @@ window#bar {
         &:hover-out {
             background-color: #004ecb;
             box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9);
-            transition: all 0.5s ease-in-out;
+            transition: all 1s ease-in-out;
             border-radius: 6px;
         }
     }
@@ -468,4 +481,38 @@ window#bar {
 
 .blue-box button:hover {
     background-color: #6c6c6c;
+}
+
+/// desktop-clock
+
+.desktop-clock {
+    font-weight: 400;
+    //box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-size: 6rem;
+    text-shadow: rgba(0, 0, 0, 0.637) 0px 3px 6px, rgba(0, 0, 0, 0.723) 0px 3px 6px;
+
+}
+
+.font1 {
+    font-family: "Better Summer";
+    //font-family: "Beautiful Variella";
+}
+
+.font {
+    //Hillarie - Personal Use
+    //Beautiful Variella
+    //
+    font-family: "Slender";
+
+}
+
+.textStyle {
+    font-size: 4rem;
+    text-shadow: rgba(0, 0, 0, 0.637) 0px 3px 6px, rgba(0, 0, 0, 0.723) 0px 3px 6px;
+
+}
+
+.clipboard {
+    border-radius: 35px;
+    box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.8) inset;
 }

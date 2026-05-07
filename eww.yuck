@@ -4,4 +4,6 @@
 
 (include "./yuck/variables.yuck")
 (include "./yuck/widgets.yuck")
+(include "./yuck/widgets/widget.yuck")
 (include "./yuck/windows.yuck")
+(include "./yuck/widgets/clipboard/clip.yuck")
