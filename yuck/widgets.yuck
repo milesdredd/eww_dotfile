@@ -46,6 +46,7 @@
                                 "${round((EWW_NET.wlp8s0?.NET_UP ?: 0) / 1048576, 2)} MB/s" :
                                 "${round((EWW_NET.wlp8s0?.NET_UP ?: 0) / 1024, 0)} KB/s"}"
                         )
+                        (label :text "Arka+Fortuner@07#[cycle]")
 
         )
         (box 
@@ -62,7 +63,7 @@
                 (progress  :class "wifiScale"
                     :orientation "v"
                     :flipped "true"
-                    :value 100;"${wifi.signal -30?:0}"
+                    :value "${wifi.signal -30?:0}"
                 )
                 (image :class ""
                     :path "/home/milesdredd/.config/eww/src/wifiCover.png"

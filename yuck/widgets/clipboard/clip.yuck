@@ -1,18 +1,26 @@
 (defwindow calender
   :monitor "eDP-1"
-  :geometry (geometry :x "1550px" :y "520px" :width "350px" :height "550px")
+  :geometry (geometry :x "0%" :y "50%" :width "330px" :height "120px")
   :anchor "center"
-  :exclusive "true"
+  :exclusive "false"
   :stacking "bg"
-  :focusable "true"
+  :focusable "false"
   ;:windowtype "normal"
+  :namespace "calendar"
   :visible true
   :type "toolbar"
   (calender-box )
 )
 (defwidget calender-box []
-    (eventbox :class "new clipboard"
-        (box :class "new"
+    (box :class "clipboard "
+        (box :class ""
+        (calendar :class "cal "
+        :show-heading true
+        :month {formattime(EWW_TIME, "%m")}
+
+        
+        
+        )
             
         )
     )

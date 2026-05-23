@@ -17,29 +17,24 @@
 
 .wifiScale {
     >trough {
-        background-color: #404040;
-
+        background-color: #1d459d;
         min-height: 1px;
         min-width: 15px;
         border-radius: 0px;
 
         >progress {
             margin: 3px;
-            background-color: rgb(94, 179, 165);
+            background-color: rgb(78, 158, 224);
             min-height: 0px;
             min-width: 15px;
         }
     }
-
 }
-
-
 
 .shadow {
     text-shadow:
         0px -2px 4px rgba(0, 0, 0, 1),
         0px 4px 4px rgba(0, 0, 0, 1);
-
 }
 
 .box-shadow {
@@ -48,21 +43,17 @@
 }
 
 .plate {
-
     // border: 1px solid red;
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
     border-radius: 8px;
     background-color: #202020;
-    // max-height: 28px;
-    // background-color: #292929;
 }
 
 .float {
 
     //border: 0px solid #373737;
     box-shadow: -1px 0px 4px rgba(0, 0, 0, 0.7), inset 0px 0px 5px rgba(0, 0, 0, 0.9);
-
     margin: 8px 8px 8px 0px;
     padding: 20px;
     border-radius: 0px 40px 40px 0px;
@@ -76,7 +67,6 @@
     font-family: "JetBrainsMono Nerd Font";
     border-radius: 8px;
     padding: 0px 4px;
-
 
     //background-color: #474747;
     &:hover {
@@ -95,7 +85,6 @@ window#bar {
 
 //////////////////////////////////////////////
 .sky {
-
     transition: out 0.5s ease-in-out;
     color: rgb(136, 198, 221);
 }
@@ -113,7 +102,6 @@ window#bar {
     background-color: #10c72f;
     border-radius: 4px;
 }
-
 
 ///////////////////////////////////////////////
 .yellow {
@@ -191,7 +179,6 @@ window#bar {
     &:active {
         background-color: #4d4d4d;
     }
-
 }
 
 .buton {
@@ -212,7 +199,6 @@ window#bar {
 
 .circ_cpu {
     background-color: #4c4c4c;
-
 
 }
 
@@ -245,8 +231,6 @@ window#bar {
         min-height: 63px;
         border-radius: 10px;
         box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.9);
-
-
     }
 
     .left,
@@ -506,6 +490,18 @@ window#bar {
 
 }
 
+.cal {
+    //
+    //Beautiful Variella
+    //Slender
+    font-family: "Hillarie - Personal Use";
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-shadow: rgb(0, 0, 0) 2px 1px 3px, rgb(0, 0, 0) -2px -1px 3px;
+    background-color: transparent;
+
+}
+
 .textStyle {
     font-size: 4rem;
     text-shadow: rgba(0, 0, 0, 0.637) 0px 3px 6px, rgba(0, 0, 0, 0.723) 0px 3px 6px;
@@ -513,6 +509,7 @@ window#bar {
 }
 
 .clipboard {
+
     border-radius: 35px;
-    box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.8) inset;
+
 }

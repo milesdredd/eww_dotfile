@@ -1,3 +1,17 @@
+
+(defwindow widget
+  :monitor "eDP-1"
+  :geometry (geometry :x "10px" :y "40px" :width "100%" :height "300px")
+  :anchor "top center"
+  
+  :stacking "bg"
+  :visible true
+  :type "normal"
+  :namespace "awww-daemon"
+  (widget-box )
+)
+
+
 (defwidget widget-box[]
     (box :class ""
     
