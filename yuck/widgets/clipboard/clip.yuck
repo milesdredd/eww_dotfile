@@ -1,27 +1,46 @@
-(defwindow calender
+(defpoll tasks :interval "1s" "/home/milesdredd/.config/eww/modules/get_clipboard_tasks.sh")
+
+(defwindow task
   :monitor "eDP-1"
-  :geometry (geometry :x "0%" :y "50%" :width "330px" :height "120px")
+  :geometry (geometry
+    :x "10%"
+    :y "50%"
+    :width "130px"
+    :height "220px")
   :anchor "center"
   :exclusive "false"
   :stacking "bg"
   :focusable "false"
-  ;:windowtype "normal"
-  :namespace "calendar"
+  :namespace "task"
   :visible true
   :type "toolbar"
-  (calender-box )
-)
-(defwidget calender-box []
-    (box :class "clipboard "
-        (box :class ""
-        (calendar :class "cal "
-        :show-heading true
-        :month {formattime(EWW_TIME, "%m")}
 
-        
-        
+  (task-box)
+)
+
+(defwidget task-box []
+(scroll
+  :vscroll true
+
+
+  (box
+    :class "border"
+    :orientation "v"
+    :space-evenly false
+    :spacing 2
+    (for task in tasks
+      (button
+        :class "taskk textStyle"
+        :space-evenly false
+        :height 25
+        :onclick "bash -c \"${task.cmd}\" && 1"
+
+        (label
+          :class ""
+          :text "${task.name}"
         )
-            
-        )
+      )
     )
+  )
+  )
 )

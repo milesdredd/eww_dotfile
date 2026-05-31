@@ -1,7 +1,7 @@
 
 (defwindow widget
   :monitor "eDP-1"
-  :geometry (geometry :x "10px" :y "40px" :width "100%" :height "300px")
+  :geometry (geometry :x "10px" :y "40px" :width "100%" :height "150px")
   :anchor "top center"
   
   :stacking "bg"
@@ -10,28 +10,21 @@
   :namespace "awww-daemon"
   (widget-box )
 )
-
-
 (defwidget widget-box[]
     (box :class ""
-    
     :orientation "v"
         (overlay
-        :height 240
+        :height 100
                 (label
                     :valign "start"
-                    :class "desktop-clock font1"
+                    :class "desktop-clock font1 "
                     :text "${time.day} ${time.date} ${time.month} ${time.yr}\""
                 )
                 (label
                 :valign "end"
-                    :class "desktop-clock font1"
+                    :class "desktop-clock font1 "
                     :text "${time.hour}:${time.min}"
                 )
-        )
-        (label
-            :class "textStyle font"
-            :text "Hi miles !"
         )
     )
 

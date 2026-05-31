@@ -1,5 +1,5 @@
 @import "/home/milesdredd/.config/eww/system_monitor.scss";
-
+@import "/home/milesdredd/.config/eww/Notesui.scss";
 * {
     all: unset;
 }
@@ -63,15 +63,34 @@
 }
 
 .border {
-    border: 0px solid #474747;
+    border: 1px solid #474747;
     font-family: "JetBrainsMono Nerd Font";
     border-radius: 8px;
     padding: 0px 4px;
 
     //background-color: #474747;
     &:hover {
-        border: 0px solid #858585;
+        border: 1px solid #858585;
         background-color: #474747;
+    }
+}
+
+.taskk {
+    animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0s 1 forwards;
+    border: 1px solid #474747;
+    border-radius: 8px;
+    padding: 2px;
+    background-color: #222222;
+
+    &:hover {
+        border: 1px solid #84e42a;
+        background-color: #2f3a3a;
+    }
+
+    &:active {
+        border: 1px solid #84e42a;
+        background-color: #1bebeb;
+        color: #202020;
     }
 }
 
@@ -462,7 +481,6 @@ window#bar {
     padding: 2px 8px;
     margin: 0px 5px;
 }
-
 .blue-box button:hover {
     background-color: #6c6c6c;
 }
@@ -470,23 +488,25 @@ window#bar {
 /// desktop-clock
 
 .desktop-clock {
-    font-weight: 400;
     //box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    font-size: 6rem;
+
     text-shadow: rgba(0, 0, 0, 0.637) 0px 3px 6px, rgba(0, 0, 0, 0.723) 0px 3px 6px;
 
 }
 
 .font1 {
-    font-family: "Better Summer";
-    //font-family: "Beautiful Variella";
+    font-family: "Beautiful Variella";
+    font-size: 5rem;
+    font-weight: 500;
+    //Better Summer
+    //ubuntu
 }
 
 .font {
     //Hillarie - Personal Use
     //Beautiful Variella
-    //
-    font-family: "Slender";
+    //Slender
+    font-family: "";
 
 }
 

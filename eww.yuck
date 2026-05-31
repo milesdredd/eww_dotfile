@@ -7,3 +7,4 @@
 (include "./yuck/widgets/widget.yuck")
 (include "./yuck/windows.yuck")
 (include "./yuck/widgets/clipboard/clip.yuck")
+(include "./yuck/widgets/Dnotes/NotesPopup.yuck")

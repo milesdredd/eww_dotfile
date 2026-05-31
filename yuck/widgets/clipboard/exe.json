@@ -1,0 +1,30 @@
+[
+    {
+        "name": "MS design",
+        "cmd": "brave --profile-directory=1 --app=https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design"
+    },
+    {
+        "name": "data communication",
+        "cmd": "okular '/home/milesdredd/Documents/University_things/notes/sem4/data comm/(McGraw-Hill Forouzan Networking) Behrouz A. Forouzan - Data Communications and Networking -McGraw-Hill Higher Education (2007) (1).pdf'"
+    },
+    {
+        "name": "class Notes",
+        "cmd": "brave --profile-directory=1 --app=https://protectedtext.com/MilesNotes"
+    },
+    {
+        "name": "S D",
+        "cmd": "brave --profile-directory=1 --app=https://www.youtube.com/playlist?list=PLinedj3B30sBlBWRox2V2tg9QJ2zr4M3o"
+    },
+     {
+        "name": "Bar",
+        "cmd": "/home/milesdredd/.config/niri/struts.sh"
+    },
+
+
+
+
+    {
+        "name": "edit",
+        "cmd": "kate '/home/milesdredd/.config/eww/yuck/widgets/clipboard/exe.json'"
+    }
+]

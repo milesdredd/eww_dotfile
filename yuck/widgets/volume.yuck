@@ -4,7 +4,7 @@
     :onhover "eww update rev_vol=true"
     :onhoverlost "eww update rev_vol=false"
     :width 30
-        (box :class "border"
+        (box :class ""
             :space-evenly false
             :spacing 0
             :halign "center"
