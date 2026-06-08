@@ -1,0 +1,13 @@
+.red-btn {
+    background-color: #d03737;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.notes-textview {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+}

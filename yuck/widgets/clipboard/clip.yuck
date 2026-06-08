@@ -1,12 +1,11 @@
 (defpoll tasks :interval "1s" "/home/milesdredd/.config/eww/modules/get_clipboard_tasks.sh")
-
 (defwindow task
   :monitor "eDP-1"
   :geometry (geometry
-    :x "10%"
-    :y "50%"
+    :x "89%"
+    :y "60%"
     :width "130px"
-    :height "220px")
+    :height "260px")
   :anchor "center"
   :exclusive "false"
   :stacking "bg"
@@ -24,17 +23,38 @@
 
 
   (box
-    :class "border"
+    :class ""
     :orientation "v"
     :space-evenly false
-    :spacing 2
+    :spacing 3
+    (box :orientation "h"
+      (button
+        :class "taskk"
+        :space-evenly false
+        :height 25
+        :onclick "/home/milesdredd/.config/niri/struts.sh && 1"
+        (label
+          :class ""
+          :text "Bar"
+        )
+      )
+      (button
+        :class "taskk"
+        :space-evenly false
+        :height 25
+        :onclick "eww close task && 1"
+        (label
+          :class ""
+          :text " X "
+        )
+      )
+    )
     (for task in tasks
       (button
-        :class "taskk textStyle"
+        :class "taskk"
         :space-evenly false
         :height 25
         :onclick "bash -c \"${task.cmd}\" && 1"
-
         (label
           :class ""
           :text "${task.name}"

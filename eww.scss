@@ -10,7 +10,9 @@
     font-weight: 400;
     //transition: out 0.5s ease-in-out;
 }
-
+.up{
+   // z-index: 99;
+}
 .data {
     font-size: 12px;
 }
@@ -40,14 +42,15 @@
 .box-shadow {
     border: 0px solid red;
     box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.562);
+
 }
 
 .plate {
     // border: 1px solid red;
     margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
-    border-radius: 8px;
-    background-color: #202020;
+    padding: 0px 2px 0px 2px;
+    border-radius: 0px 0px 0px 0px;
+    background-color: #33264a;
 }
 
 .float {
@@ -74,6 +77,18 @@
         background-color: #474747;
     }
 }
+.hoverr {
+    border: 1px solid #3fff14;
+    border-radius: 8px;
+    padding: 2px 2px;
+
+    //background-color: #474747;
+    &:hover {
+        border: 1px solid #ffa914;
+        background-color: #474747;
+    }
+}
+
 
 .taskk {
     animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0s 1 forwards;
@@ -89,8 +104,8 @@
 
     &:active {
         border: 1px solid #84e42a;
-        background-color: #1bebeb;
-        color: #202020;
+        background-color: #222626;
+        color: #a3a3a3;
     }
 }
 
@@ -103,6 +118,9 @@ window#bar {
 }
 
 //////////////////////////////////////////////
+.dullWhite{
+    color: #999999;
+}
 .sky {
     transition: out 0.5s ease-in-out;
     color: rgb(136, 198, 221);
@@ -495,11 +513,12 @@ window#bar {
 }
 
 .font1 {
-    font-family: "Beautiful Variella";
+    font-family: "Better Summer";
     font-size: 5rem;
     font-weight: 500;
-    //Better Summer
+    //
     //ubuntu
+    //Beautiful Variella
 }
 
 .font {

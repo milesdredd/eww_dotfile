@@ -6,7 +6,8 @@
 (defpoll cons :interval "1s" `cat /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode`)
 (defpoll pw_dw :interval "3s" `upower -i /org/freedesktop/UPower/devices/battery_BAT1 | awk '/energy-rate/ { print $2 }'`)
 (defpoll c_c :interval "5000s" `cat /sys/class/power_supply/BAT1/cycle_count`)
-(defpoll value :interval 1 "{EWW_CPU.avg}*20")
+(defpoll cpu_max_freq :interval 5 `cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq`)
+
 (defpoll fan1 :interval "10s" `cat /sys/class/hwmon/hwmon4/fan1_input`)
 (defpoll fan2 :interval "10s" `cat /sys/class/hwmon/hwmon4/fan2_input`)
 (defpoll blue :interval "3s" "/bin/bash /home/milesdredd/.config/eww/modules/blue.sh")

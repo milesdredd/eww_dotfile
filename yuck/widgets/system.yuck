@@ -18,6 +18,7 @@
 					:class "${EWW_CPU.avg > 95 ? 'red' : EWW_CPU.avg > 70 ? 'orange' : EWW_CPU.avg > 30 ? 'yellow' :  'sky'} circ_cpu"
 				
 					)
+
 				)
 				(transform
 				:translate-x "44.10%"
@@ -55,6 +56,52 @@
 					:preserve-aspect-ratio true
 					:image-width 500
 				)
+				(transform
+				:translate-x "-12%"
+				:translate-y "30.5%"
+				:scale-x "67%"
+				:scale-y "67%"
+                    (label
+                        :style "font-size: 30px;"
+                        :class "dullWhite shadow"
+                        :text "${round(EWW_CPU.avg,1)}%"
+                    )
+                )
+                (transform
+				:translate-x "-12%"
+				:translate-y "50.5%"
+				:scale-x "67%"
+				:scale-y "67%"
+                    (label
+                        :style "font-size: 30px;"
+                        :class "dullWhite shadow"
+                        :text "Max: ${round(cpu_max_freq/1000000,1)}GHz"
+                    )
+                )
+
+                (transform
+				:translate-x "45%"
+				:translate-y "30.5%"
+				:scale-x "67%"
+				:scale-y "67%"
+                    (label
+                        :style "font-size: 30px;"
+                        :class "dullWhite shadow"
+                        :text "${round(gpu,1)}%"
+                    )
+                )
+                (transform
+				:translate-x "17%"
+				:translate-y "45.5%"
+				:scale-x "67%"
+				:scale-y "67%"
+                    (label
+                        :style "font-size: 23px;"
+                        :class "dullWhite shadow"
+                        :text "${round(EWW_RAM.used_mem_perc,1)}%"
+                    )
+                )
+
 			)
         )
     )
@@ -78,7 +125,7 @@
                 (label
 					:style "font-size: 10px;"
                     :class "shadow"
-                    :text "C"
+                    :text "${round(EWW_CPU.avg,0)}"
                 )
             )
             
@@ -96,7 +143,7 @@
             (box :halign "center" :space-evenly true
                 (label  :style "font-size: 10px;"
                     :class ""
-                    :text "G"
+                    :text "${round(gpu,0)}"
                 )
             )
         )
@@ -119,7 +166,7 @@
             (box :halign "center" :space-evenly true
                 (label  :style "font-size: 10px;"
                     :class "shadow"
-                    :text "R"
+                    :text "${round(EWW_RAM.used_mem_perc,0)}"
                 )
             )
         )

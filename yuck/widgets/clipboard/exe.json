@@ -1,11 +1,15 @@
 [
+      {
+        "name": "Bar",
+        "cmd": "/home/milesdredd/.config/niri/struts.sh"
+    },
     {
         "name": "MS design",
         "cmd": "brave --profile-directory=1 --app=https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design"
     },
     {
         "name": "data communication",
-        "cmd": "okular '/home/milesdredd/Documents/University_things/notes/sem4/data comm/(McGraw-Hill Forouzan Networking) Behrouz A. Forouzan - Data Communications and Networking -McGraw-Hill Higher Education (2007) (1).pdf'"
+        "cmd": "okular '/home/milesdredd/Documents/University_things/notes/sem4/data comm/Data-Communications-and-Network-5e.pdf'"
     },
     {
         "name": "class Notes",
@@ -15,10 +19,21 @@
         "name": "S D",
         "cmd": "brave --profile-directory=1 --app=https://www.youtube.com/playlist?list=PLinedj3B30sBlBWRox2V2tg9QJ2zr4M3o"
     },
+
      {
-        "name": "Bar",
-        "cmd": "/home/milesdredd/.config/niri/struts.sh"
+        "name": "Daily Notes",
+        "cmd": "python ~/.config/eww/yuck/widgets/Dnotes/dnotes.py today"
     },
+    {
+        "name": "Time Table",
+        "cmd": "xdg-open '/home/milesdredd/temp/timetable sem4 exam.png' "
+    },
+    {
+        "name": "java oop",
+        "cmd": "xdg-open '/home/milesdredd/Documents/University_things/notes/sem4/java oop/OOP-NOTES-JAVA-2.pdf' "
+    },
+
+
 
 
 
