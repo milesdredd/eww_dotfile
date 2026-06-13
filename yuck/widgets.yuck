@@ -6,7 +6,7 @@
 (include "./yuck/widgets/system.yuck")
 (include "./yuck/widgets/QuickBar/Qbar.yuck")
 (include "./yuck/widgets/bluetooth.yuck")
-
+(include "./yuck/widgets/bar.yuck")
 (defwidget wifi[]
     (tooltip
         (box
@@ -112,51 +112,7 @@
     ))
 )
 
-(defwidget bar1 []
-    (revealer
-        :reveal bar
-        :valign "start"
-        :transition "slidedown" 
-        :duration "600ms"
-        (box  :class ""
-        :height 28
 
-            (centerbox
-            :valign "start"
-
-            
-            :class "plate box-shadow"
-            :height 20
-                (box  
-                :spacing 1 
-                :space-evenly true 
-                :orientation "h"
-                                    (sys_info)
-                )
-                (box  
-                :spacing 7 
-                :space-evenly 1 
-                :orientation "h"
-                                    (clock)  
-                )
-                (box  
-                :class "" 
-                :halign "end" 
-                :spacing 0
-                :space-evenly false 
-                :orientation "h"
-                                    (wifi)
-                                    (Bluetooth)
-                                    (br)
-                                    (vol)
-                                    (tray)
-                                    (battery)
-                                    (power)
-                )
-            )
-        )
-    )
-)
 
 (defwidget  Qbar []
     (box :class ""

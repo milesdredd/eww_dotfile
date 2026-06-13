@@ -1,11 +1,11 @@
 [
-      {
-        "name": "Bar",
-        "cmd": "/home/milesdredd/.config/niri/struts.sh"
-    },
     {
         "name": "MS design",
         "cmd": "brave --profile-directory=1 --app=https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design"
+    },
+    {
+    "name": "white Noise",
+    "cmd": "brave --profile-directory=1 --app=https://www.youtube.com/watch?v=nMfPqeZjc2c&t=24467s"
     },
     {
         "name": "data communication",
