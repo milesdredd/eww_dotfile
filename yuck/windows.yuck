@@ -7,6 +7,15 @@
   :namespace "top-panel"
   (bar1 :orientation "h")
 )
+(defwindow barbg
+  :monitor "eDP-1"
+  :geometry (geometry :x "0px" :y "0%" :width "100%" :height "0px")
+  :exclusive true
+  :anchor "center"
+  :stacking "fg"
+  :namespace "top-panel"
+  (barbgobj :orientation "h")
+)
 
 (defwindow quickbar
   :monitor "eDP-1"

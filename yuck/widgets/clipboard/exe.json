@@ -8,8 +8,8 @@
     "cmd": "brave --profile-directory=1 --app=https://www.youtube.com/watch?v=nMfPqeZjc2c&t=24467s"
     },
     {
-        "name": "data communication",
-        "cmd": "okular '/home/milesdredd/Documents/University_things/notes/sem4/data comm/Data-Communications-and-Network-5e.pdf'"
+        "name": "cpp next",
+        "cmd": "xdg-open '/home/milesdredd/Documents/Library_books/Tech/cpp/C++ Primer (5th Edition).pdf' "
     },
     {
         "name": "class Notes",
@@ -27,10 +27,6 @@
     {
         "name": "Time Table",
         "cmd": "xdg-open '/home/milesdredd/temp/timetable sem4 exam.png' "
-    },
-    {
-        "name": "java oop",
-        "cmd": "xdg-open '/home/milesdredd/Documents/University_things/notes/sem4/java oop/OOP-NOTES-JAVA-2.pdf' "
     },
 
 
