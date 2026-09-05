@@ -1,5 +1,6 @@
 @import "/home/milesdredd/.config/eww/system_monitor.scss";
 @import "/home/milesdredd/.config/eww/Notesui.scss";
+
 * {
     all: unset;
 }
@@ -10,27 +11,13 @@
     font-weight: 400;
     //transition: out 0.5s ease-in-out;
 }
-.up{
-   // z-index: 99;
+
+.up {
+    // z-index: 99;
 }
+
 .data {
     font-size: 12px;
-}
-
-.wifiScale {
-    >trough {
-        background-color: #1d459d;
-        min-height: 1px;
-        min-width: 15px;
-        border-radius: 0px;
-
-        >progress {
-            margin: 3px;
-            background-color: rgb(78, 158, 224);
-            min-height: 0px;
-            min-width: 15px;
-        }
-    }
 }
 
 .shadow {
@@ -45,25 +32,12 @@
 
 }
 
-.plate {
+.platee {
     // border: 1px solid red;
-    margin: 0px 0px 0px 0px;
-    padding: 0px 2px 0px 2px;
-    border-radius: 0px 0px 0px 0px;
-    background-color: #292929;
+    background-color: #33264a;
 }
 
-.float {
 
-    //border: 0px solid #373737;
-    box-shadow: -1px 0px 4px rgba(0, 0, 0, 0.7), inset 0px 0px 5px rgba(0, 0, 0, 0.9);
-    margin: 8px 8px 8px 0px;
-    padding: 20px;
-    border-radius: 0px 40px 40px 0px;
-    background-color: #414141;
-    // max-height: 28px;
-    // background-color: #292929;
-}
 
 .border {
     border: 1px solid #474747;
@@ -77,6 +51,7 @@
         background-color: #474747;
     }
 }
+
 .hoverr {
     border: 1px solid #3fff14;
     border-radius: 8px;
@@ -118,9 +93,10 @@ window#bar {
 }
 
 //////////////////////////////////////////////
-.dullWhite{
+.dullWhite {
     color: #999999;
 }
+
 .sky {
     transition: out 0.5s ease-in-out;
     color: rgb(136, 198, 221);
@@ -427,7 +403,6 @@ window#bar {
 
 .new {
     background-color: #cc9876;
-    border: 2px solid #6c6c6c;
 }
 
 .check {
@@ -499,6 +474,7 @@ window#bar {
     padding: 2px 8px;
     margin: 0px 5px;
 }
+
 .blue-box button:hover {
     background-color: #6c6c6c;
 }
@@ -513,20 +489,37 @@ window#bar {
 }
 
 .font1 {
-    font-family: "Better Summer";
+    font-family: "Z003";
     font-size: 5rem;
     font-weight: 500;
-    //
+    //Better Summer
     //ubuntu
     //Beautiful Variella
+    //SF Pro Display
+    //Slender
+    //Hillarie - Personal Use
 }
 
 .font {
     //Hillarie - Personal Use
     //Beautiful Variella
     //Slender
-    font-family: "";
+    //Z003
+    font-family: "Comic Sans MS";
+    font-size: 1.2rem;
+    font-weight: 500;
 
+}
+.float {
+
+    //border: 0px solid #373737;
+    box-shadow: -1px 0px 4px rgba(0, 0, 0, 0.7), inset 0px 0px 5px rgba(0, 0, 0, 0.9);
+    margin: 0px 0px 0px 0px;
+    padding: 11px;
+    border-radius: 0px 40px 40px 0px;
+    background-color: #414141;
+    // max-height: 28px;
+    //background-color: #292929;
 }
 
 .cal {
@@ -538,17 +531,15 @@ window#bar {
     font-size: 1.3rem;
     text-shadow: rgb(0, 0, 0) 2px 1px 3px, rgb(0, 0, 0) -2px -1px 3px;
     background-color: transparent;
-
 }
 
 .textStyle {
     font-size: 4rem;
     text-shadow: rgba(0, 0, 0, 0.637) 0px 3px 6px, rgba(0, 0, 0, 0.723) 0px 3px 6px;
-
 }
 
 .clipboard {
-
     border-radius: 35px;
 
 }
+

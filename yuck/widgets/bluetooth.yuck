@@ -2,6 +2,17 @@
 (defpoll bluetooth_connected :interval "5s" "/home/milesdredd/.config/eww/modules/bluetooth.sh --connected")
 (defpoll bluetooth_available :interval "5s" "/home/milesdredd/.config/eww/modules/bluetooth.sh --available")
 
+;top panel bt
+(defwidget Bluetooth []
+    (button :class "" :width 1 :onclick "eww open bluetooth-panel" :onrightclick "eww close bluetooth-panel"
+        (label
+            :width 0
+            :style "font-size: 14px;"
+            :text ""
+        )
+    )
+)
+
 (defwidget blue-box []
   (box :class "blue-box" :orientation "v" :space-evenly false :spacing 20
     (box :orientation "h" :space-evenly true :spacing 10

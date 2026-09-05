@@ -1,11 +1,28 @@
 [
     {
-        "name": "MS design",
-        "cmd": "brave --profile-directory=1 --app=https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design"
+        "name": "compose ",
+        "cmd": "brave --profile-directory=1 --app=https://youtu.be/U5dE-_E1wsg"
+    },
+    {
+        "name": "newspaper ",
+        "cmd": "brave --profile-directory=1 --app=https://timesofindia.indiatimes.com/"
     },
     {
     "name": "white Noise",
     "cmd": "brave --profile-directory=1 --app=https://www.youtube.com/watch?v=nMfPqeZjc2c&t=24467s"
+    },
+    {
+    "name": "awe",
+    "cmd": "brave --profile-directory=1 --app=https://github.com/bayandin/awesome-awesomeness"
+    },
+    {
+    "name": "Fragment",
+    "cmd": "brave --profile-directory=1 --app=https://fragment.com/kyc/account"
+    },
+
+    {
+    "name": "Fast api",
+    "cmd": "brave --profile-directory=1 --app=https://youtube.com/playlist?list=PLKnIA16_RmvZ41tjbKB2ZnwchfniNsMuQ&si=8qVZcPvflSatEeVw"
     },
     {
         "name": "cpp next",

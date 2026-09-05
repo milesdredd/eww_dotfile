@@ -29,7 +29,7 @@
                     :halign "center"
                     :valign "center"
                     :orientation "v"
-                    :class {power_usage > 0 ? "B-using" : "B-prog-panel"}
+                    :class {power_usage > 1 ? "B-using" : "B-prog-panel"}
                     :orientation "h"
                     :value {EWW_BATTERY.BAT1.capacity}
                 )

@@ -3,7 +3,7 @@
   :geometry (geometry :x "0px" :y "0px" :width "100%" :height "0px")
   :exclusive true
   :anchor "center"
-  :stacking "bg"
+  :stacking "fg"
   :namespace "top-panel-blur"
   (barbg :orientation "h")
 )
@@ -15,9 +15,9 @@
         :valign "start"
         :transition "slidedown"
         :duration "600ms"
-        (box  :class ""
-        :height 20
-(label :text " gg ")
+        (box  :class "platee"
+        :height 21
+(label :text "  ")
 
         )
     )
@@ -53,14 +53,14 @@
                 (box
                 :class ""
                 :halign "end"
-                :spacing 0
+                :spacing 5
                 :space-evenly false
                 :orientation "h"
-                                    (wifi)
-                                    (Bluetooth)
+
+                                   (wifi) (Bluetooth)
                                     (br)
                                     (vol)
-                                    (tray)
+                              (tray)
                                     (battery)
                                     (power)
                 )

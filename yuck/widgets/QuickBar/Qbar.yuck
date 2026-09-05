@@ -1,5 +1,5 @@
 (defwidget qbar []
-    
+    ;rqb
         (revealer 
         :halign "start"
         :reveal rqb :transition "slideright" :duration "600ms"

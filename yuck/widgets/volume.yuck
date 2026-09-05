@@ -3,7 +3,7 @@
     :onscroll "wpctl set-volume @DEFAULT_AUDIO_SINK@ {}%; eww update volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $2 * 100}')"
     :onhover "eww update rev_vol=true"
     :onhoverlost "eww update rev_vol=false"
-    :width 30
+    :width 15
         (box :class ""
             :space-evenly false
             :spacing 0

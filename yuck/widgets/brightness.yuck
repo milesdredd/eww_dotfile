@@ -2,11 +2,10 @@
     (eventbox :class ""
     :onhover "eww update rev_brightness=true"
     :onhoverlost "eww update rev_brightness=false"
-    :width 30
+    :width 15
         (box :class ""
             :space-evenly false
-            :width 20
-            :halign "end"
+            :halign "center"
 
             (label 
                     :justify "center"
@@ -26,8 +25,8 @@
                     (box
                         :width 4
                     )
-                    (scale :min 1
-                        :max 101
+                    (scale :min 0
+                        :max 99
                         :class "${brightness > 95 ? 'red' : brightness > 70 ? 'yellow' : brightness > 30 ? 'blue' :  'low'}"
                         :value {brightness}
                         :round-digits 10

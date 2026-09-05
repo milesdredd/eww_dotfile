@@ -34,8 +34,8 @@
         :height 25
         :onclick "/home/milesdredd/.config/niri/struts.sh && 1"
         (label
-          :class ""
-          :text "Bar"
+          :class "big"
+          :text ""
         )
       )
       (button
@@ -44,8 +44,8 @@
         :height 25
         :onclick "eww close task && 1"
         (label
-          :class ""
-          :text " X "
+          :class "big"
+          :text " x "
         )
       )
     )

@@ -19,8 +19,8 @@
         
             )
             (label
-            :class ""
-            :text "${time.day} ${time.date} ${time.month} ${time.yr} | ${time.hour}:${time.min}:${time.sec}"
+            :class "shadow "
+            :text "${time.day} ${time.date} ${time.month} ${time.yr}\" | ${time.hour}:${time.min} ${time.sec}\'"
             )
             (label
             :class "big"
@@ -34,10 +34,24 @@
 )
 
 (defwidget qclock[]
-    
-            
-        (label 
-            :class "big"  
+        (box :class "qbar"
+        :vexpand true
+        :hexpand true
+        :valign "center"
+
+        :orientation "v"
+
+
+            (label
+            :valign "start"
+            :class " font"
             :text "${time.hour}:${time.min}:${time.sec}"
-        )   
+            )
+            (label
+            :valign "center"
+            :class "font"
+            :text "${time.day} ${time.date}"
+            )
+
+    )
 )

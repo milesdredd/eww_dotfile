@@ -46,7 +46,9 @@
                                 "${round((EWW_NET.wlp8s0?.NET_UP ?: 0) / 1048576, 2)} MB/s" :
                                 "${round((EWW_NET.wlp8s0?.NET_UP ?: 0) / 1024, 0)} KB/s"}"
                         )
-                        (label :text "Arka+Fortuner@07#[cycle]")
+                        (label :text "01GAS#2#booo@09")
+                        ;01GAS#2#benchod@09
+
 
         )
         (box 
@@ -57,25 +59,10 @@
             :orientation "v"
 
 
-            (overlay :class "" :space-evenly "false"
-            
 
-                (progress  :class "wifiScale"
-                    :orientation "v"
-                    :flipped "true"
-                    :value "${wifi.signal -30?:0}"
+                (label
+                :text "${wifi.icon}"
                 )
-                (image :class ""
-                    :path "/home/milesdredd/.config/eww/src/wifiCover.png"
-                    :preserve-aspect-ratio "true"
-                    :image-height 20
-                    :valign "center"
-                    :halign "center"
-                )
-                
-
-                
-            )
             
                 )
              (box :class ""
@@ -90,20 +77,11 @@
     )
 )
 
-(defwidget Bluetooth []
-    (button :class "" :width 20 :onclick "eww open bluetooth-panel" :onrightclick "eww close bluetooth-panel"
-        (label
-            :width 4
-            :style "font-size: 14px;"
-            :text ""
-        )
-    )
-)
+
 
 (defwidget tray[]
     (box :class ""
     (systray
-            
             :icon-size 16
             :spacing 8
             :space-evenly false

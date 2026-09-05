@@ -1,9 +1,9 @@
 
 (defwindow widget
   :monitor "eDP-1"
-  :geometry (geometry :x "10px" :y "40px" :width "100%" :height "250px")
-  :anchor "top center"
-  
+  :geometry (geometry :x "0px" :y "50px" :width "100%" :height "240px")
+  :anchor "bottom"
+  :exclusive false
   :stacking "bg"
   :visible true
   :type "normal"

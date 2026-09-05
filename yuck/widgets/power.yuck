@@ -3,15 +3,15 @@
 		:cursor "pointer"
         :onhover "eww update pow=true"
         :onhoverlost "eww update pow=false"
-        (box :space-evenly false :spacing 6
+        (box :space-evenly false :spacing 0
             
             (revealer :reveal pow :transition "slideleft" :duration "600ms"
                 (box :spacing 5 :space-evenly true
                     (button :tooltip "shutdown" :width 30 :class "border" :onclick "python ~/.config/eww/yuck/widgets/Dnotes/dnotes.py today && 1"  (label :class "red" :text "⏻"))
-                    (button :tooltip "lock" :class "border" :onclick "hyprlock &" (label :text ""))
+                    (button :tooltip "lock" :class "border" :onclick "/home/milesdredd/.config/niri/struts.sh && 1" (label :text ""))
                     (button :tooltip "configs" :onclick "kate ~/.config/niri ~/.config/eww &" :class "border" (label :text ""))
 
-                    (button :tooltip "change wallpaper" :onclick "/home/milesdredd/.config/niri/wallpaper.sh" :onrightclick "/home/milesdredd/.config/niri/wallpaper.sh p" :class "border" (label :text ""))
+                    (button :tooltip "Leet" :onclick "gtk-launch leetcode" :onrightclick "/home/milesdredd/.config/niri/wallpaper.sh p" :class "border" (label :text ""))
 
                     (button :class "border"  :tooltip "reboot" :onclick "systemctl reboot" (label :class "orange" :text ""))
                 )
@@ -19,9 +19,7 @@
             (box 
                 (transform
                     :rotate 0
-                    :transform-origin-x 15
-                    :transform-origin-y 15
-                    (label :width 30 :style "font-size: 14px;" :class "shadow" :text "")
+                    (label :width 20 :style "font-size: 14px;" :class "shadow" :text "")
                 )   
             )
         )
